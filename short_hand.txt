@@ -1,0 +1,8 @@
+eval $(ssh-agent -s)
+ssh-add ~/.ssh/id_rsa
+ssh -T git@GitHub.com
+# check connection
+
+hexo clean --config source/_data/next.yml && hexo g --config source/_data/next.yml
+hexo s
+hexo d
